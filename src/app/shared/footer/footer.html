@@ -1,0 +1,61 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="SimplifyMVT Academy" class="footer-logo">
+        <p>We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</p>
+        <div class="footer-address">
+          <p><strong>Add:</strong> 3rd floor, Om Sai Niwas, Subhash Road, Vile Parle (East), Mumbai 400057, India</p>
+          <p><strong>Call:</strong> +91 9022 225 496</p>
+          <p><strong>Email:</strong> support&#64;simplifymvt.com</p>
+        </div>
+      </div>
+
+      <!-- Menu Column -->
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          @for (link of menuLinks; track link.path) {
+            <li><a [routerLink]="link.path">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          @for (link of quickLinks; track link.label) {
+            <li><a [routerLink]="link.path">{{ link.label }}</a></li>
+          }
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Enter your Email address to register to our newsletter subscriptions.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button class="btn btn-accent">Subscribe <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>Copyright {{ currentYear }}. All Rights Reserved</p>
+      <button class="scroll-top" (click)="scrollToTop()" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>

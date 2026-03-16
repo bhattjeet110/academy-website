@@ -1,0 +1,135 @@
+.event-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.event-main {
+  .event-banner-img {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, #333333, #3d4f5f);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+
+    i {
+      font-size: 4rem;
+      color: #fff;
+      opacity: 0.3;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .event-desc {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+}
+
+.speaker-section {
+  margin-top: 36px;
+
+  h3 { margin-bottom: 20px; }
+
+  .speaker-card {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+
+    .speaker-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      i { font-size: 2.5rem; color: #999999; }
+    }
+
+    .speaker-info {
+      h4 { margin-bottom: 4px; }
+
+      .speaker-role {
+        color: #4A90D9;
+        font-size: 0.85rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      p { font-size: 0.88rem; line-height: 1.7; }
+    }
+  }
+}
+
+.event-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+
+  .countdown-item {
+    text-align: center;
+    background: #eef2f7;
+    border-radius: 10px;
+    padding: 16px 8px;
+
+    .count-value {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #3B5998;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .count-label {
+      font-size: 0.75rem;
+      color: #888888;
+    }
+  }
+}
+
+.event-details-card {
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+
+  h3 { margin-bottom: 16px; font-size: 1.2rem; }
+
+  .detail-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    strong { color: #333333; flex-shrink: 0; }
+    span { color: #555555; }
+  }
+}
+
+@media (max-width: 992px) {
+  .event-layout { grid-template-columns: 1fr; }
+  .event-sidebar { position: static; }
+}

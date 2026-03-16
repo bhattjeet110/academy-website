@@ -1,0 +1,65 @@
+<app-breadcrumb pageName="Upcoming Event"></app-breadcrumb>
+
+<section class="upcoming-page section">
+  <div class="container">
+    <div class="event-layout">
+      <div class="event-main">
+        <div class="event-banner-img">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+
+        <h2>{{ eventDetails.topic }}</h2>
+        <p class="event-desc">{{ eventDetails.description }}</p>
+
+        <div class="speaker-section">
+          <h3>Event Speakers</h3>
+          <div class="speaker-card">
+            <div class="speaker-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="speaker-info">
+              <h4>{{ speaker.name }}</h4>
+              <span class="speaker-role">{{ speaker.role }}</span>
+              <p>{{ speaker.bio }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-sidebar">
+        <div class="countdown">
+          <div class="countdown-item">
+            <span class="count-value">{{ countdown.days }}</span>
+            <span class="count-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="count-value">{{ countdown.hours | number:'2.0-0' }}</span>
+            <span class="count-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="count-value">{{ countdown.minutes | number:'2.0-0' }}</span>
+            <span class="count-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="count-value">{{ countdown.seconds | number:'2.0-0' }}</span>
+            <span class="count-label">Seconds</span>
+          </div>
+        </div>
+
+        <div class="event-details-card">
+          <h3>Details</h3>
+          <div class="detail-row"><strong>Topic :</strong><span>{{ eventDetails.topic }}</span></div>
+          <div class="detail-row"><strong>Start :</strong><span>{{ eventDetails.date }}</span></div>
+          <div class="detail-row"><strong>Time :</strong><span>{{ eventDetails.time }}</span></div>
+          <div class="detail-row"><strong>Location :</strong><span>{{ eventDetails.location }}</span></div>
+          <div class="detail-row"><strong>What you will learn:</strong><span>{{ eventDetails.whatYouLearn }}</span></div>
+          <div class="detail-row"><strong>Duration :</strong><span>{{ eventDetails.duration }}</span></div>
+          <div class="detail-row"><strong>Language :</strong><span>{{ eventDetails.language }}</span></div>
+          <div class="detail-row"><strong>Certificate:</strong><span></span></div>
+        </div>
+
+        <app-registration-form [compact]="true"></app-registration-form>
+      </div>
+    </div>
+  </div>
+</section>

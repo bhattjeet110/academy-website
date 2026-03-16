@@ -1,0 +1,21 @@
+<app-breadcrumb pageName="Academy FAQ's"></app-breadcrumb>
+
+<section class="faqs-page section">
+  <div class="container">
+    <div class="faq-list">
+      @for (faq of faqs; track faq.question; let i = $index) {
+        <div class="faq-item" [class.open]="faq.open">
+          <button class="faq-question" (click)="toggleFaq(i)">
+            {{ faq.question }}
+            <i class="fas" [class.fa-chevron-up]="faq.open" [class.fa-chevron-down]="!faq.open"></i>
+          </button>
+          @if (faq.open) {
+            <div class="faq-answer">
+              <p>{{ faq.answer }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

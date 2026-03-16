@@ -1,0 +1,210 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-blob b1"></div>
+    <div class="hero-blob b2"></div>
+    <div class="hero-grid-pattern"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          India's Leading Medical Tourism Academy
+        </div>
+        <h1>Your Top Source For Expert Knowledge And Training In <span class="highlight">Medical Tourism!</span></h1>
+        <p class="hero-desc">We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</p>
+        <div class="hero-actions">
+          <a routerLink="/upcoming-session" class="btn-hero-primary">Our Events <i class="fas fa-arrow-right"></i></a>
+          <a routerLink="/past-sessions" class="btn-hero-outline">
+            <i class="fas fa-play-circle"></i> Watch Sessions
+          </a>
+        </div>
+        <div class="hero-stats-bar">
+          <div class="hero-stat">
+            <span class="hero-stat-val">9.3K+</span>
+            <span class="hero-stat-lbl">Professionals Enrolled</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-val">20+</span>
+            <span class="hero-stat-lbl">Languages</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-val">100%</span>
+            <span class="hero-stat-lbl">Free Courses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual -->
+      <div class="hero-visual">
+        <div class="hero-visual-wrapper">
+          <div class="hero-main-card">
+            <div class="hmc-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Free Knowledge Sessions</h3>
+            <p>Expert-led courses on medical tourism, healthcare standards, and business growth.</p>
+            <div class="hmc-tags">
+              <span class="hmc-tag"><i class="fas fa-stethoscope"></i> Medical Tourism</span>
+              <span class="hmc-tag"><i class="fas fa-certificate"></i> Certified</span>
+              <span class="hmc-tag"><i class="fas fa-globe-americas"></i> Global Access</span>
+            </div>
+          </div>
+
+          <!-- Floating accents -->
+          <div class="hero-float hf-1">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div class="hero-float hf-2">
+            <i class="fas fa-plane"></i>
+          </div>
+          <div class="hero-float hf-3">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <div class="hero-ring r1"></div>
+          <div class="hero-ring r2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<app-benefits></app-benefits>
+
+<!-- About Section -->
+<section class="about-section section bg-light">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="about-img-placeholder">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+      </div>
+      <div class="about-content">
+        <h2 class="section-title">ABOUT US</h2>
+        <div class="section-divider"></div>
+        <p class="about-subtitle">We Provide Best Education Services For You</p>
+        <div class="about-tabs">
+          <button class="tab" [class.active]="activeTab === 'about'" (click)="setTab('about')">About Academy</button>
+          <button class="tab" [class.active]="activeTab === 'mission'" (click)="setTab('mission')">Our Mission</button>
+          <button class="tab" [class.active]="activeTab === 'vision'" (click)="setTab('vision')">Our Vision</button>
+        </div>
+        <p>{{ aboutTabs[activeTab] }}</p>
+        @if (activeTab === 'about') {
+          <div class="about-features">
+            <div class="feature"><i class="fas fa-check"></i> Education award achieved</div>
+            <div class="feature"><i class="fas fa-check"></i> Join online from Anywhere</div>
+          </div>
+        }
+        <a routerLink="/about" class="btn btn-primary">Know More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Event Section -->
+<section class="upcoming-event section">
+  <div class="container">
+    <div class="event-banner">
+      <div class="event-info">
+        <h2><span class="text-accent">Join Us For</span>  <strong>Our Upcoming Event</strong></h2>
+        <div class="section-divider"></div>
+        <p class="event-tagline">Stay Ahead In The Medical Tourism Industry!</p>
+        <div class="event-details">
+          <p><strong>Speaker:</strong> Dr. Shyam Shrivastava</p>
+          <p><strong>Date:</strong> 3rd June, 2023</p>
+          <p><strong>Time:</strong> 12:56 AM</p>
+          <p><strong>Location:</strong> India</p>
+        </div>
+      </div>
+      <div class="event-form">
+        <app-registration-form></app-registration-form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Past Sessions -->
+<section class="past-sessions section bg-light">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">OUR PAST SESSIONS</span>
+      <h2 class="section-title">Catch Up on Our Past Sessions: Watch Them Anytime!</h2>
+      <div class="section-divider center"></div>
+    </div>
+    <div class="sessions-grid">
+      @for (session of pastSessions; track session.title; let i = $index) {
+        <div class="session-card card">
+          <div class="session-thumbnail">
+            @if (playingIndex === i) {
+              <iframe [src]="getEmbedUrl(session.videoId)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            } @else {
+              <img [src]="'https://img.youtube.com/vi/' + session.videoId + '/hqdefault.jpg'" [alt]="session.title">
+              <div class="play-overlay" (click)="playVideo(i)">
+                <i class="fas fa-play"></i>
+              </div>
+            }
+          </div>
+          <div class="session-info">
+            <h4>{{ session.title }}</h4>
+            <div class="session-meta">
+              <span><i class="fas fa-user"></i> {{ session.speaker }}</span>
+              <span><i class="fas fa-calendar"></i> {{ session.date }}</span>
+            </div>
+            <div class="stars">
+              @for (s of getStars(session.rating); track $index) {
+                <i class="fas fa-star" [style.color]="s ? '#f39c12' : '#ddd'"></i>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="text-center" style="margin-top: 32px;">
+      <a routerLink="/past-sessions" class="btn btn-primary">Browse more <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Supporters -->
+<app-supporters></app-supporters>
+
+<!-- FAQ Section -->
+<section class="faq-section section bg-light">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-content">
+        <span class="section-label">FAQ'S</span>
+        <h2 class="section-title">Find answers To Common Questions Here.</h2>
+        <div class="section-divider"></div>
+        <div class="faq-list">
+          @for (faq of faqs; track faq.question; let i = $index) {
+            <div class="faq-item" [class.open]="faq.open">
+              <button class="faq-question" (click)="toggleFaq(i)">
+                {{ faq.question }}
+                <i class="fas" [class.fa-chevron-up]="faq.open" [class.fa-chevron-down]="!faq.open"></i>
+              </button>
+              @if (faq.open) {
+                <div class="faq-answer">
+                  <p>{{ faq.answer }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      <div class="faq-image">
+        <div class="faq-img-placeholder">
+          <i class="fas fa-question-circle"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<app-testimonials></app-testimonials>

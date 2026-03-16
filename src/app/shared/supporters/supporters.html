@@ -1,0 +1,20 @@
+<section class="supporters section">
+  <div class="container">
+    <div class="supporters-content">
+      <div class="supporters-text">
+        <span class="section-label">OUR KEY SUPPORTERS</span>
+        <h2 class="section-title">Learn with Our Key Supporters</h2>
+        <div class="section-divider"></div>
+        <p>Recognizing Our Key Supporters and Strategic Partners</p>
+      </div>
+      <div class="supporters-grid">
+        @for (supporter of supporters; track supporter.name) {
+          <div class="supporter-card">
+            <div class="supporter-logo">{{ supporter.initials }}</div>
+            <span>{{ supporter.name }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

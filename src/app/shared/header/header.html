@@ -1,0 +1,26 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container">
+    <nav class="navbar">
+      <a routerLink="/" class="logo">
+        <img src="assets/images/logo.png" alt="SimplifyMVT Academy" class="logo-img">
+      </a>
+
+      <button class="mobile-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" [class.open]="menuOpen">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a></li>
+        <li><a routerLink="/past-sessions" routerLinkActive="active" (click)="closeMenu()">Past Sessions</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a></li>
+      </ul>
+
+      <a routerLink="/upcoming-session" class="btn btn-primary nav-cta" (click)="closeMenu()">
+        Our Upcoming Session
+      </a>
+    </nav>
+  </div>
+</header>

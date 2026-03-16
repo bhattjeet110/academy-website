@@ -1,0 +1,91 @@
+<app-breadcrumb pageName="About Us"></app-breadcrumb>
+
+<!-- Hero -->
+<section class="about-hero section">
+  <div class="container">
+    <div class="about-hero-grid">
+      <div class="about-hero-content">
+        <span class="section-label">ABOUT US</span>
+        <h1>Your Premier Destination For Free <span class="text-primary">Medical Tourism Education.</span></h1>
+        <div class="section-divider"></div>
+        <p>At SimplifyMVT Academy, we believe that knowledge is power. Our expertly curated courses cover a wide range of topics, including Treatment Knowledge, patient management, international healthcare standards, legal considerations, and marketing strategies tailored to the medical tourism industry.</p>
+        <p>By providing accessible and up-to-date information, we aim to foster a well-informed community that can drive innovation and excellence in medical tourism.</p>
+        <p>Whether you are a healthcare professional, a business owner, or someone interested in exploring the opportunities in medical tourism, our academy offers valuable insights and resources.</p>
+        <p>Our dedicated team of industry experts is committed to delivering high-quality, practical education that can be applied in real-world scenarios. With our free online courses, webinars, and resource library, you can learn at your own pace and gain the skills necessary to succeed in this competitive market. SimplifyMVT Academy is your gateway to mastering the complexities of medical tourism and achieving your professional goals.</p>
+      </div>
+      <div class="about-hero-images">
+        <div class="about-img-placeholder">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission/Vision Tabs -->
+    <div class="mission-vision">
+      <div class="mv-tabs">
+        <button [class.active]="activeTab === 'mission'" (click)="activeTab = 'mission'">Our Mission</button>
+        <span class="divider">|</span>
+        <button [class.active]="activeTab === 'vision'" (click)="activeTab = 'vision'">Our Vision</button>
+      </div>
+      @if (activeTab === 'mission') {
+        <p>To provide high-quality education in medical tourism, empowering professionals and businesses with the skills and knowledge to excel in this dynamic field.</p>
+      }
+      @if (activeTab === 'vision') {
+        <p>To be the leading global platform for medical tourism education, fostering innovation and excellence, and enhancing patient care worldwide.</p>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<div class="bg-light">
+  <app-benefits></app-benefits>
+</div>
+
+<!-- Contact Info -->
+<section class="contact-strip section">
+  <div class="container">
+    <div class="contact-strip-grid">
+      <div class="contact-item">
+        <h4>Get In Touch:</h4>
+        <a href="mailto:support@simplifymvt.com" class="text-primary">support&#64;simplifymvt.com</a>
+      </div>
+      <div class="contact-item">
+        <span>or</span>
+      </div>
+      <div class="contact-item">
+        <h4>Call Us Via:</h4>
+        <a href="tel:+919022225496" class="phone">+91 9022 225 496</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supporters -->
+<app-supporters></app-supporters>
+
+<!-- Testimonials -->
+<app-testimonials></app-testimonials>
+
+<!-- Join Section -->
+<section class="join-section section">
+  <div class="container">
+    <div class="join-grid">
+      <div class="join-content">
+        <span class="section-label">CONNECT WITH US</span>
+        <h2 class="section-title">Join SimplifyMVT Academy Today</h2>
+        <div class="section-divider"></div>
+        <p>Take the first step towards mastering the complexities of medical tourism. With our support and resources, you'll be well-prepared to thrive in this exciting and growing field.</p>
+        <ul class="join-features">
+          <li><i class="fas fa-check"></i> We offer Free Knowledge sessions</li>
+          <li><i class="fas fa-check"></i> Led by Industry experts</li>
+          <li><i class="fas fa-check"></i> Grow Your Business</li>
+          <li><i class="fas fa-check"></i> Interactive Learning</li>
+        </ul>
+      </div>
+      <div class="join-form">
+        <app-registration-form title="Join Us"></app-registration-form>
+      </div>
+    </div>
+  </div>
+</section>

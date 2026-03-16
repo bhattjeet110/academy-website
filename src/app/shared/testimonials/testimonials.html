@@ -1,0 +1,45 @@
+<section class="testimonials section bg-light">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">TESTIMONIALS</span>
+      <h2 class="section-title">See What Our Learners Are Saying</h2>
+      <div class="section-divider center"></div>
+    </div>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-card">
+        <div class="stars">
+          @for (star of getStars(testimonials[currentIndex].rating); track $index) {
+            <i class="fas fa-star"></i>
+          }
+        </div>
+        <p class="testimonial-text">{{ testimonials[currentIndex].text }}</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            {{ testimonials[currentIndex].name.charAt(0) }}
+          </div>
+          <div>
+            <h4>{{ testimonials[currentIndex].name }}</h4>
+            <span>{{ testimonials[currentIndex].role }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-dots">
+        @for (t of testimonials; track $index) {
+          <button
+            class="dot"
+            [class.active]="$index === currentIndex"
+            (click)="currentIndex = $index"
+            [attr.aria-label]="'View testimonial ' + ($index + 1)">
+          </button>
+        }
+      </div>
+
+      <div class="slider-nav">
+        <button (click)="prev()" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+        <button (click)="next()" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+.breadcrumb-bar {
+  background: #eef2f7;
+  padding: 14px 0;
+  margin-top: 72px;
+  border-bottom: 1px solid #e2e8f0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: #555555;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #3B5998;
+    }
+  }
+
+  .separator {
+    color: #999999;
+    font-size: 0.7rem;
+  }
+
+  .current {
+    color: #3B5998;
+    font-weight: 600;
+  }
+}

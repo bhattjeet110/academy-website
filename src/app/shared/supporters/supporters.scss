@@ -1,0 +1,71 @@
+.supporters-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.supporters-text {
+  p {
+    font-size: 0.95rem;
+    color: #888888;
+  }
+}
+
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.supporter-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .supporter-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3B5998, #4EC6E0);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0 auto 10px;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: #888888;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .supporters-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .supporters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .supporters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

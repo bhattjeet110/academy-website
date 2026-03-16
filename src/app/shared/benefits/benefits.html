@@ -1,0 +1,22 @@
+<section class="benefits section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label">BENEFITS</span>
+      <h2 class="section-title">Your Path to Industry Excellence</h2>
+      <div class="section-divider center"></div>
+      <p class="section-subtitle">"Discover the Key Benefits of Learning with Our Medical Tourism Academy"</p>
+    </div>
+
+    <div class="benefits-grid">
+      @for (benefit of benefits; track benefit.title) {
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i [class]="benefit.icon"></i>
+          </div>
+          <h4>{{ benefit.title }}</h4>
+          <p>{{ benefit.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
