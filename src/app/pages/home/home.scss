@@ -370,6 +370,312 @@
   }
 }
 
+// Learn From Experts
+.experts-section {
+  padding: 0;
+}
+
+.experts-banner {
+  background: linear-gradient(135deg, #1a2035 0%, #2a3a5c 100%);
+  padding: 56px 0;
+}
+
+.experts-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.experts-heading {
+  min-width: 320px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+
+    span {
+      color: #4EC6E0;
+    }
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+}
+
+.experts-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.expert-pill {
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.88rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(78, 198, 224, 0.1);
+    border-color: rgba(78, 198, 224, 0.3);
+    color: #fff;
+  }
+}
+
+@media (max-width: 992px) {
+  .experts-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .experts-heading {
+    min-width: auto;
+
+    p { max-width: none; }
+  }
+
+  .experts-pills {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .experts-banner { padding: 40px 0; }
+
+  .expert-pill {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+}
+
+// Why Choose Us & Benefits of Joining
+.wcu-jb-section {
+  background: #f8fafd;
+}
+
+.wcu-jb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+// Why Choose Us column
+.wcu-col {
+  background: #fff;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(59, 89, 152, 0.05);
+
+  .wcu-col-header {
+    padding: 28px 28px 20px;
+    border-bottom: 1px solid #f0f3f8;
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a2035;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.84rem;
+      color: #8a95a5;
+      margin: 0;
+    }
+  }
+}
+
+.wcu-grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 20px 24px 24px;
+}
+
+.wcu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: #f8fafd;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #fff;
+    border-color: #e0e7f1;
+    box-shadow: 0 4px 16px rgba(59, 89, 152, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .wcu-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+
+    i { font-size: 1rem; }
+
+    &.blue {
+      background: #eef2ff;
+      i { color: #3B5998; }
+    }
+    &.teal {
+      background: #e6f7f7;
+      i { color: #0d9488; }
+    }
+    &.purple {
+      background: #f0ecff;
+      i { color: #7c3aed; }
+    }
+    &.orange {
+      background: #fff4e6;
+      i { color: #e8720d; }
+    }
+    &.green {
+      background: #e8f5e9;
+      i { color: #2e7d32; }
+    }
+    &.red {
+      background: #fce8e8;
+      i { color: #c62828; }
+    }
+  }
+
+  strong {
+    font-size: 0.85rem;
+    color: #1a2035;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 0.76rem;
+    color: #8a95a5;
+    line-height: 1.45;
+  }
+}
+
+// Benefits of Joining column
+.jb-col {
+  background: #fff;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(59, 89, 152, 0.05);
+  display: flex;
+  flex-direction: column;
+
+  .jb-col-header {
+    padding: 28px 28px 20px;
+    border-bottom: 1px solid #f0f3f8;
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a2035;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 0.84rem;
+      color: #8a95a5;
+      margin: 0;
+    }
+  }
+}
+
+.jb-list {
+  list-style: none;
+  padding: 16px 28px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: #f8fafd;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: #eef2ff;
+      transform: translateX(4px);
+    }
+
+    .jb-li-check {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: #e8f5e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i { font-size: 0.65rem; color: #43a047; }
+    }
+
+    .jb-li-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+
+      strong {
+        font-size: 0.88rem;
+        color: #1a2035;
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 0.78rem;
+        color: #8a95a5;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.jb-cta {
+  margin: 0 28px 28px;
+}
+
+@media (max-width: 768px) {
+  .wcu-jb-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wcu-grid-cards {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+
 // About Section
 .about-grid {
   display: grid;

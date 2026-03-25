@@ -9,21 +9,21 @@ import { Component } from '@angular/core';
 export class Testimonials {
   testimonials = [
     {
-      name: 'Tom Hurley',
-      role: 'Content Creator',
-      text: 'Lorem ipsum dolor amet consetetur elit adicing elit sed mod tempor incid idunt enim minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.',
+      name: 'Student',
+      role: 'Medical Tourism Learner',
+      text: 'This academy gave me real industry knowledge. I started my career in medical tourism within months!',
       rating: 5
     },
     {
-      name: 'Robert Lane',
-      role: 'Developer',
-      text: 'Lorem ipsum dolor amet consetetur elit adicing elit sed mod tempor incid idunt enim minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.',
+      name: 'Healthcare Professional',
+      role: 'Senior Practitioner',
+      text: 'The sessions by senior doctors were extremely valuable and practical.',
       rating: 5
     },
     {
-      name: 'Sarah Chen',
-      role: 'Designer',
-      text: 'Lorem ipsum dolor amet consetetur elit adicing elit sed mod tempor incid idunt enim minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.',
+      name: 'Course Participant',
+      role: 'Industry Enthusiast',
+      text: 'Highly recommended for anyone looking to enter the healthcare industry.',
       rating: 5
     }
   ];

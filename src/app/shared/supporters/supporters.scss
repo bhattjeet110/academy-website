@@ -9,6 +9,38 @@
   p {
     font-size: 0.95rem;
     color: #888888;
+    text-align: justify;
+  }
+}
+
+.supporters-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #3a4554;
+    font-weight: 500;
+
+    i {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 8px;
+      background: #eef2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #3B5998;
+    }
   }
 }
 
@@ -21,7 +53,7 @@
 .supporter-card {
   background: #fff;
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 20px 16px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid #eef2f7;
@@ -32,18 +64,13 @@
     transform: translateY(-2px);
   }
 
-  .supporter-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #3B5998, #4EC6E0);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
+  img {
+    width: 120px;
+    height: 80px;
+    max-width: 100%;
+    object-fit: contain;
     margin: 0 auto 10px;
+    display: block;
   }
 
   span {

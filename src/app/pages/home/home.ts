@@ -18,7 +18,7 @@ export class Home {
   activeTab = 'about';
 
   aboutTabs: Record<string, string> = {
-    about: 'At SimplifyMVT Academy, we believe that knowledge is power. Our expertly curated courses cover a wide range of topics, including Treatment Knowledge, patient management, international healthcare standards, legal considerations, and marketing strategies tailored to the medical tourism industry. By providing accessible and up-to-date information, we aim to foster a well-informed community that can drive innovation and excellence in medical tourism.',
+    about: 'SimplifyMVT Academy is a dedicated Medical Tourism Education Platform focused on empowering individuals and organizations with the knowledge and skills required to succeed in the global healthcare industry.<br><br>We bridge the gap between healthcare expertise and career opportunities by offering practical, industry-oriented training programs. Our sessions are conducted by senior doctors, healthcare professionals, and industry experts, ensuring real-world insights and hands-on learning.<br><br>We believe that education should be accessible, which is why we offer a mix of free knowledge sessions and premium career-focused programs.',
     mission: 'To provide high-quality education in medical tourism, empowering professionals and businesses with the skills and knowledge to excel in this dynamic field.',
     vision: 'To be the leading global platform for medical tourism education, fostering innovation and excellence, and enhancing patient care worldwide.'
   };
@@ -56,18 +56,28 @@ export class Home {
 
   faqs = [
     {
-      question: 'What is SimplifyMVT Academy?',
-      answer: 'SimplifyMVT Academy is an educational platform that provides free, high-quality resources and courses on medical tourism. We aim to empower professionals and businesses with the knowledge needed to excel in the medical tourism industry.',
+      question: 'What is Medical Tourism?',
+      answer: 'Medical tourism involves traveling to another country for medical treatment and healthcare services.',
       open: true
     },
     {
-      question: 'Who can join SimplifyMVT Academy?',
-      answer: 'Anyone interested in medical tourism can join, including healthcare professionals, medical tourism facilitators, travel agents, students, business owners, and anyone seeking to learn more about this field.',
+      question: 'Who can join these courses?',
+      answer: 'Anyone interested in healthcare, medical tourism, or career growth in this field.',
       open: false
     },
     {
-      question: 'How much does it cost to access the Sessions?',
-      answer: 'All courses and resources on SimplifyMVT Academy are completely free of charge.',
+      question: 'Are there free sessions available?',
+      answer: 'Yes, we regularly conduct free knowledge sessions.',
+      open: false
+    },
+    {
+      question: 'Do I get a certificate?',
+      answer: 'Yes, certificates are provided for completed programs.',
+      open: false
+    },
+    {
+      question: 'Are the courses online or offline?',
+      answer: 'Most sessions are conducted online for global accessibility. But some courses are offline.',
       open: false
     }
   ];

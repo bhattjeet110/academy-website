@@ -20,9 +20,9 @@ export class Footer {
 
   quickLinks = [
     { label: "FAQ's", path: '/faqs' },
-    { label: 'Terms and Conditions', path: '/faqs' },
-    { label: 'Privacy Policy', path: '/faqs' },
-    { label: 'Medical Tourism Newsletter', path: '/faqs' }
+    { label: 'Terms and Conditions', path: '#' },
+    { label: 'Privacy Policy', path: '#' },
+    { label: 'Medical Tourism Newsletter', path: '#' }
   ];
 
   scrollToTop() {

@@ -17,11 +17,11 @@ export class Contact {
   };
 
   socialLinks = [
-    { icon: 'fab fa-facebook-f', url: '#' },
-    { icon: 'fab fa-linkedin-in', url: '#' },
-    { icon: 'fab fa-instagram', url: '#' },
-    { icon: 'fab fa-x-twitter', url: '#' },
-    { icon: 'fab fa-youtube', url: '#' }
+    { icon: 'fab fa-facebook-f', url: 'https://www.facebook.com/simplifymvt' },
+    { icon: 'fab fa-linkedin-in', url: 'https://in.linkedin.com/company/simplifymvt' },
+    { icon: 'fab fa-instagram', url: 'https://www.instagram.com/simplifymvt/' },
+    { icon: 'fab fa-x-twitter', url: 'https://x.com/SimplifyMvt' },
+    { icon: 'fab fa-youtube', url: 'https://www.youtube.com/@simplifymvt1518' }
   ];
 
   onSubmit() {

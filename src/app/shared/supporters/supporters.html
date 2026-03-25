@@ -5,12 +5,17 @@
         <span class="section-label">OUR KEY SUPPORTERS</span>
         <h2 class="section-title">Learn with Our Key Supporters</h2>
         <div class="section-divider"></div>
-        <p>Recognizing Our Key Supporters and Strategic Partners</p>
+        <ul class="supporters-features">
+          <li><i class="fas fa-hospital"></i> Leading Multispeciality Hospitals</li>
+          <li><i class="fas fa-globe"></i> International Patient Care Centers</li>
+          <li><i class="fas fa-award"></i> Accredited Healthcare Institutions</li>
+          <li><i class="fas fa-handshake"></i> Healthcare Partners from our Countries</li>
+        </ul>
       </div>
       <div class="supporters-grid">
         @for (supporter of supporters; track supporter.name) {
           <div class="supporter-card">
-            <div class="supporter-logo">{{ supporter.initials }}</div>
+            <img [src]="supporter.image" [alt]="supporter.name">
             <span>{{ supporter.name }}</span>
           </div>
         }

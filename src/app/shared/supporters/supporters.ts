@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Supporters {
   supporters = [
-    { name: 'CreativeBook', initials: 'CB' },
-    { name: 'OwlBook', initials: 'OB' },
-    { name: 'University', initials: 'U' },
-    { name: 'EduHouse', initials: 'EH' },
-    { name: 'State University', initials: 'SU' },
-    { name: 'Global University', initials: 'GU' }
+    { name: 'Jupiter Hospital', image: 'assets/images/key-supporters/jupiter.png' },
+    { name: 'Magnus Hospital', image: 'assets/images/key-supporters/magnus.png' },
+    { name: 'Ambani Hospital', image: 'assets/images/key-supporters/Ambani.png' },
+    { name: 'NCI', image: 'assets/images/key-supporters/NCI.png' },
+    { name: 'HCG Cancer Centre', image: 'assets/images/key-supporters/hcg.png' },
+    { name: 'Jaslok Hospital', image: 'assets/images/key-supporters/jaslok.png' }
   ];
 }
